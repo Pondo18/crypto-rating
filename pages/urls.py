@@ -3,5 +3,4 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('search/<str:crypto_name>/', views.test),
 ]

@@ -34,8 +34,9 @@
                     <div class="hero-copy">
                         <h1 class="hero-title mt-0">CryptoCurrency rating</h1>
                         <p class="hero-paragraph"></p>
-                        <form action="index.html">
-                            <input class="button" type="text" placeholder="e.g. bitcoin">
+                        <form method="post" action="{% url 'search-crypto' %}">
+                            {% csrf_token %}
+                            <input class="button" type="text" placeholder="e.g. bitcoin" name="searched_crypto">
                         </form>
 {#                        <div class="hero-cta"><a class="button button-primary" href="#">Pre order now</a><a#}
 {#                                class="button" href="#">Get in touch</a></div>#}

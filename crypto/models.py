@@ -2,9 +2,9 @@ from django.db import models
 import datetime
 
 
-class Currency(models.Model):
-    symbol = models.CharField(max_length=4, unique=True)
-    slug = models.CharField(max_length=20, unique=True)
-    rank = models.IntegerField()
-    active_top = models.BooleanField(default=True)
-    last_changed = models.DateField(default=datetime.date.today)
+class Currencies(models.Model):
+    symbol = models.CharField(max_length=5, unique=True)
+    slug = models.CharField(max_length=32, unique=True)
+    rank = models.IntegerField(null=True)
+    active_top = models.BooleanField(auto_created=True)
+    last_changed = models.DateField(auto_now_add=datetime.date.today())
