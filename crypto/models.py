@@ -8,3 +8,9 @@ class Currencies(models.Model):
     rank = models.IntegerField(null=True)
     active_top = models.BooleanField(auto_created=True)
     last_changed = models.DateField(auto_now_add=datetime.date.today())
+
+
+class AnalysedScores(models.Model):
+    date = models.DateField(auto_now_add=datetime.date.today())
+    score = models.FloatField()
+    crypto_currency = models.ForeignKey(Currencies, on_delete=models.CASCADE)
