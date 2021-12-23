@@ -19,4 +19,4 @@ class SearchCrypto:
             date = analysed_score_object.date
             weight = 0.9 ** (datetime.date.today() - date).days
             analysed_score = (analysed_score + analysed_score_object.score * weight) / (1 + weight)
-        return analysed_score
+        return round(analysed_score, 2)

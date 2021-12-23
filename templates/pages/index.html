@@ -64,60 +64,17 @@
             <div class="container">
                 <div class="features-inner section-inner has-bottom-divider">
                     <div class="features-wrap">
-                        <div class="feature text-center is-revealing">
+                        {% for crypto in top_crypto %}
+                         <div class="feature text-center is-revealing">
                             <div class="feature-inner">
                                 <div class="feature-icon">
-                                    <img src="dist/images/feature-icon-01.svg" alt="Feature 01">
+                                    <img src="dist/images/feature-icon-01.svg" alt="">
                                 </div>
-                                <h4 class="feature-title mt-24">Top Crypto 1</h4>
-                                <p class="text-sm mb-0">Current SentimentScore: 0.98</p>
+                                <h4 class="feature-title mt-24">{{ crypto.name }}</h4>
+                                <p class="text-sm mb-0">Current SentimentScore: {{ crypto.score }}</p>
                             </div>
                         </div>
-                        <div class="feature text-center is-revealing">
-                            <div class="feature-inner">
-                                <div class="feature-icon">
-                                    <img src="dist/images/feature-icon-02.svg" alt="Feature 02">
-                                </div>
-                                <h4 class="feature-title mt-24">Top Crypto 2</h4>
-                                <p class="text-sm mb-0">Current SentimentScore: 0.96</p>
-                            </div>
-                        </div>
-                        <div class="feature text-center is-revealing">
-                            <div class="feature-inner">
-                                <div class="feature-icon">
-                                    <img src="dist/images/feature-icon-03.svg" alt="Feature 03">
-                                </div>
-                                <h4 class="feature-title mt-24">Top Crypto 3</h4>
-                                <p class="text-sm mb-0">Current SentimentScore: 0.94</p>
-                            </div>
-                        </div>
-                        <div class="feature text-center is-revealing">
-                            <div class="feature-inner">
-                                <div class="feature-icon">
-                                    <img src="dist/images/feature-icon-04.svg" alt="Feature 04">
-                                </div>
-                                <h4 class="feature-title mt-24">Top Crypto 4</h4>
-                                <p class="text-sm mb-0">Current SentimentScore: 0.9</p>
-                            </div>
-                        </div>
-                        <div class="feature text-center is-revealing">
-                            <div class="feature-inner">
-                                <div class="feature-icon">
-                                    <img src="dist/images/feature-icon-05.svg" alt="Feature 05">
-                                </div>
-                                <h4 class="feature-title mt-24">Top Crypto 5</h4>
-                                <p class="text-sm mb-0">Current SentimentScore: 0.85</p>
-                            </div>
-                        </div>
-                        <div class="feature text-center is-revealing">
-                            <div class="feature-inner">
-                                <div class="feature-icon">
-                                    <img src="dist/images/feature-icon-06.svg" alt="Feature 06">
-                                </div>
-                                <h4 class="feature-title mt-24">Top Crypto 6</h4>
-                                <p class="text-sm mb-0">Current SentimentScore: 0.8</p>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
