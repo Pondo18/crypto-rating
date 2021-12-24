@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'pages',
     'crypto',
     'reddit',
+    # 'psqlextra',
 ]
 
 MIDDLEWARE = [
@@ -84,6 +85,21 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': '127.0.0.1:6379',
+        'OPTIONS': {
+            'DB': 1,
+            'PASSWORD': 'pass',
+            'PARSER_CLASS': 'redis.connection.HiredisParser',
+            'CONNECTION_POOL_CLASS': 'redis.BlockingConnectionPool',
+            'PICKLE_VERSION': -1,
+        },
+    },
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
