@@ -11,6 +11,12 @@ class Currencies(models.Model):
 
 
 class AnalysedScores(models.Model):
-    date = models.DateField(auto_now_add=datetime.date.today())
-    score = models.FloatField()
+    date = models.DateField(auto_now_add=datetime.date.today(), primary_key=True)
     crypto_currency = models.ForeignKey(Currencies, on_delete=models.CASCADE)
+    score = models.FloatField()
+
+    class Meta:
+        managed = False
+        db_table = 'crypto_analysed_scores'
+        unique_together = (('date', 'crypto_currency'),)
+

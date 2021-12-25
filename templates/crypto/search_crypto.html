@@ -22,10 +22,7 @@
             <div class="site-header-inner">
                 <div class="brand header-brand">
                     <h1 class="m-0">
-                        <form method="post" action="{% url 'index' %}">
-                            {% csrf_token %}
-                            <input class="header-logo-image" type="image" src="{% static 'images/logo.svg' %}">
-                        </form>
+                        <a href="{% url 'index' %}"><img src="{% static 'images/logo.svg' %}" alt=""></a>
                     </h1>
                 </div>
             </div>

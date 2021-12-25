@@ -10,7 +10,6 @@ from crypto.usecases import SearchCrypto
 def _get_cache_timout():
     dt = datetime.datetime.now()
     second_ = ((26 - dt.hour - 1) * 60 * 60) + ((60 - dt.minute - 1) * 60) + (60 - dt.second) + 100
-    print(second_)
     return second_
 
 
