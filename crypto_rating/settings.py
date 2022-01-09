@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import yaml
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -75,13 +77,17 @@ WSGI_APPLICATION = 'crypto_rating.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
+with open('crypto_rating/config.yml') as file:
+    data = yaml.load(file, Loader=yaml.FullLoader)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': 'root',
-        'PASSWORD': 'pass',
-        'HOST': '10.11.12.116',
+        'USER': data.get('database.postgres.user'),
+        'PASSWORD': data.get('database.postgres.password'),
+        'HOST': data.get('database.postgres.host'),
         'PORT': '',
     }
 }
@@ -89,10 +95,10 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.RedisCache',
-        'LOCATION': '127.0.0.1:6379',
+        'LOCATION': data.get('database.redis.host'),
         'OPTIONS': {
             'DB': 1,
-            'PASSWORD': 'pass',
+            'PASSWORD': data.get('database.redis.password'),
             'PARSER_CLASS': 'redis.connection.HiredisParser',
             'CONNECTION_POOL_CLASS': 'redis.BlockingConnectionPool',
             'PICKLE_VERSION': -1,

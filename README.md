@@ -10,7 +10,18 @@ by computing a sentiment_score based on user posts. Currently, the application o
 The Project is split into multiple services, which should be deployed in production on two different server's. 
 There was a big focus on keeping the applications loosely coupled, to make sure future changes are possible. 
 This repository is supposed to provide the main Django WebApplication. 
-The associated other applications may be found in another [repository]([https://github.com/Pondo18/crypto-rating-extra)
+The associated other applications may be found in an extra [repository]([https://github.com/Pondo18/crypto-rating-extra)
+
+### To Add
+There needs to an additional config.yml file added in the crypto_rating package. The file should look like this:
+```
+database.postgres.host: <HOST>
+database.postgres.user: <USER>
+database.postgres.password: <PASSWORD>
+
+database.redis.host: <HOST>
+database.redis.password: <PASSWORD>
+```
 
 
 ## Structure
