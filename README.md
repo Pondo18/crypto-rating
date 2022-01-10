@@ -6,22 +6,40 @@ by computing a sentiment_score based on user posts. Currently, the application o
 
 * * *
 
+## Deployment
+
+### Docker
+
+There is a [docker-compose.yml](docker-compose.yml) and a [Dockerfile](Dockerfile) located in the root dir.
+```shell
+docker-compose build 
+docker-compose up 
+``` 
+
+### TODO
+There needs to an additional config.yml file added in the crypto_rating package. The file should look as follows:
+```yaml
+database.postgres.host: <HOST>
+database.postgres.user: <USER>
+database.postgres.password: <PASSWORD>
+# When deployed via docker-compose setup database.redis.host should be 'redis:6379'
+database.redis.host: <HOST>
+database.redis.password: <PASSWORD>
+```
+
+[settings.py](/crypto_rating/settings.py) needs to be changed as followed, when deployed on a server: 
+
+```python
+ALLOWED_HOSTS = ['<Host>']
+```
+
+* * *
+
 ## Implementation 
 The Project is split into multiple services, which should be deployed in production on two different server's. 
 There was a big focus on keeping the applications loosely coupled, to make sure future changes are possible. 
 This repository is supposed to provide the main Django WebApplication. 
 The associated other applications may be found in an extra [repository]([https://github.com/Pondo18/crypto-rating-extra)
-
-### To Add
-There needs to an additional config.yml file added in the crypto_rating package. The file should look like this:
-```
-database.postgres.host: <HOST>
-database.postgres.user: <USER>
-database.postgres.password: <PASSWORD>
-
-database.redis.host: <HOST>
-database.redis.password: <PASSWORD>
-```
 
 
 ## Structure
