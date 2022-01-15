@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 
 import crypto
 from crypto.usecases import SearchCrypto
 
 
+@csrf_exempt
 def search_crypto(request):
     if request.method == 'POST':
         searched_crypto = request.POST['searched_crypto']
