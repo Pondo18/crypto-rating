@@ -3,10 +3,13 @@
 ## Motivation and Goal 
 The goal of the project is to provide an application, which should help to estimate a cryptocurrency's future price development,
 by computing a sentiment_score based on user posts. Currently, the application only takes reddit posts into account. 
+To project was created, due to a project work during our studies at the [HDBW](https://www.hdbw-hochschule.de/) bachelor program.
 
 * * *
 
 ## Deployment
+
+![server_architecture](static/images/server_architecture.png)
 
 ### Docker
 
@@ -69,3 +72,14 @@ The project is currently in an early version. We are planning on continuously im
 - The rest-api could allow to divide the WebApplication in dedicated frontend and backend. Thus, the architecture may be changed to a single page application
 - We plan to get our data from more sources (Twitter, News)
 - It will be necessary to improve the artificial intelligence, computing the scores
+
+
+## Credits & Collaborators
+### Used sources 
+- [Reddit-API](https://www.reddit.com/dev/api/)
+- [Messari-API](https://messari.io/api)
+
+
+### Collaborators
+- [Dennis Hug](https://github.com/hugson-d)
+- [Laurin Leiwes](https://github.com/NighthawkF119)

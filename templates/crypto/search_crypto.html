@@ -7,7 +7,7 @@
     <title>Crypto Rating</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
         {% load static %}
-    {% if crypto_data.score >= 0 %}
+    {% if crypto_data.score > 0 %}
         <link rel="stylesheet" href="{% static 'css/style_green.css' %}">
     {% else %}
         <link rel="stylesheet" href="{% static 'css/style_red.css' %}">
