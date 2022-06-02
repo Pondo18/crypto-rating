@@ -5,6 +5,10 @@ The goal of the project is to provide an application, which should help to estim
 by computing a sentiment_score based on user posts. Currently, the application only takes reddit posts into account. 
 To project was created, due to a project work during our studies at the [HDBW](https://www.hdbw-hochschule.de/) bachelor program.
 
+## Crypto Rating Extra Repository with additional CronJob code
+[GitHub](https://github.com/Pondo18/crypto-rating)
+
+
 * * *
 
 ## Deployment
