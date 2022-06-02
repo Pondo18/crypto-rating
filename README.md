@@ -6,7 +6,7 @@ by computing a sentiment_score based on user posts. Currently, the application o
 To project was created, due to a project work during our studies at the [HDBW](https://www.hdbw-hochschule.de/) bachelor program.
 
 ## Crypto Rating Extra Repository with additional CronJob code
-[GitHub](https://github.com/Pondo18/crypto-rating)
+[GitHub](https://github.com/Pondo18/crypto-rating-extra)
 
 
 * * *
