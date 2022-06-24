@@ -87,3 +87,4 @@ The project is currently in an early version. We are planning on continuously im
 ### Collaborators
 - [Dennis Hug](https://github.com/hugson-d)
 - [Laurin Leiwes](https://github.com/NighthawkF119)
+- [Moritz Moser](https://github.com/Pondo18)
