@@ -24,7 +24,7 @@ docker-compose up
 ``` 
 
 ### TODO
-There needs to an additional config.yml file added in the crypto_rating package. The file should look as follows:
+An additional config.yml file needs to be added in the crypto_rating package. The file should look as follows:
 ```yaml
 database.postgres.host: <HOST>
 database.postgres.user: <USER>
